@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -12,6 +13,14 @@
     "http-errors": "~1.6.2",
     "mongodb": "^3.1.4",
     "morgan": "~1.9.0",
+    "nodemon": "^1.18.4",
     "pug": "2.0.0-beta11"
+  },
+  "nodemonConfig": {
+    "env": {
+      "URL": "mongodb://@librarydb.documents.azure.com:10255/?ssl=true&replicaSet=globaldb",
+      "USER": "librarydb",
+      "PASSWORD": "6AfFq1ilYPEOlujAMb8EPXTbPGJvqlh7PSotiVvCilWTsXzjBVjF1cAma5keeIhoLNnRbAybJqkn68CNcf1Q2Q=="
+    }
   }
 }
